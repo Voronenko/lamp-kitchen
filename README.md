@@ -141,7 +141,9 @@ See [https://github.com/Voronenko/chef-developer_recipes](https://github.com/Vor
 
 Interested in building your devbox on top of Vagrant + vagrant-berkshelf plugin?
 See [https://github.com/Voronenko/vagrant-wrap](https://github.com/Voronenko/vagrant-wrap)
+
+
 Note: see following article about future of the vagrant-berkshelf plugin [https://sethvargo.com/the-future-of-vagrant-berkshelf/](https://sethvargo.com/the-future-of-vagrant-berkshelf/)
 
 Interested in building your devbox on top of Vagrant + test-kitchen?
-See See [https://github.com/Voronenko/lamp-kitchen](https://github.com/Voronenko/lamp-kitchen) 
+See [https://github.com/Voronenko/lamp-kitchen](https://github.com/Voronenko/lamp-kitchen) 
