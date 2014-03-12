@@ -38,6 +38,26 @@ Approach assumes that bash shell is in path (for windows environment it is locat
 7.  I often use local folder to keep set of files I need to overwrite in original solution to make it run on a vagrant (usually pathes, DB credentials, etc)
 8.  Feel free to commit your IDE related configs to parent repository (for example, I commit core settings from JetBrains IDea dev environment. In this way I have the same settings regardless of PC I work on)
 
+## Usage steps:
+kitchen list   - show current status of instances
+kitchen setup  - build box for the first time
+kitchen converge - force running box provisioning (for example you changed project cookbook)
+kitchen login  - log to the instance (as vagrant ssh)
+
+Q: Where is my VagrantFile?
+
+A: .kitchen\kitchen-vagrant\{AutomaticBoxName}\Vagrantfile 
+
+Q: I still want to issue vagrant commands as previously?
+
+A: vagrant.cmd in the project root efficiently passes your commands to vagrant.
+
+Q: I still want my VagrantFile in project root, because I want to commit it into my source control
+
+A: getVagrantFileHere.cmd batch copies the file. Alternatively copy it manually, but make sure to fix shared folders path (pathes are set relatively to Vagrant File)
+   However this does not make sense, because you still have to amend this file with provision instructions. Perhaps this approach suits you better: [https://github.com/Voronenko/vagrant-wrap](https://github.com/Voronenko/vagrant-wrap) ?
+
+
 
 ## \test\integration sub-folders description
 
