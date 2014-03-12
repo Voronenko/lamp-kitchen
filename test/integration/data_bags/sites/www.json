@@ -1,0 +1,9 @@
+{
+    "id": "local",
+    "host": "www",
+    "docroot":"/vagrant/public/www/public",
+    "aliases": [
+        "www.local.dev",
+        "yourprojectname.lvh.me"
+    ]
+}

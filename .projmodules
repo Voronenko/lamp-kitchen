@@ -1,0 +1,3 @@
+[submodule "public/www"]
+	path = public/www
+	url = ssh://yourgitserver/git/projectname/projectname.git

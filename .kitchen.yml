@@ -1,0 +1,31 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 1024
+    cpuexecutioncap: 50
+  network:
+  - ["forwarded_port", {guest: 80, host: 8080}]
+  - ["forwarded_port", {guest: 3306, host: 3316}]
+  - ["forwarded_port", {guest: 443, host: 8443}]
+  - ["forwarded_port", {guest: 1080, host: 1080}]
+#  - ["private_network", {ip: "192.168.33.33"}]
+  synced_folders: [ [ "../../.././public", "/vagrant/public", "mount_options: ['dmode=777','fmode=666']" ] ]
+
+provisioner:
+  name: chef_solo  
+
+platforms:
+  - name: precise32_vsdev
+    driver:
+      box: ubuntu-12.04-vsdev
+      box_url: https://dl.dropbox.com/s/nb4pmf2oiz1a2wx/precise32_dev.box 
+      vm_hostname: precise32.vsdev
+
+suites:
+  - name: default
+    run_list: ["recipe[devbox]", "role[lamp_complete]", "role[vagrant]"]
+    provisioner:
+      solo_rb:
+        environment: vagrant
+    attributes:

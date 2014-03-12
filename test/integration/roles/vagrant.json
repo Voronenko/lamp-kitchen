@@ -1,0 +1,15 @@
+{
+    "name": "vagrant",
+    "description": "Vagrant specific box provisioning",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "run_list": [
+        "recipe[devbox::apache_devsite]",
+        "recipe[devbox::php_devboxini]"
+    ],
+
+
+    "override_attributes": {
+    }
+
+}
