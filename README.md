@@ -50,7 +50,7 @@ A: .kitchen\kitchen-vagrant\{AutomaticBoxName}\Vagrantfile
 
 Q: I still want to issue vagrant commands as previously?
 
-A: vagrant.cmd in the project root efficiently passes your commands to vagrant.
+A: vgrant.cmd in the project root efficiently passes your commands to vagrant.
 
 Q: I still want my VagrantFile in project root, because I want to commit it into my source control
 
